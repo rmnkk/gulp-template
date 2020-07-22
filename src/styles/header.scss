@@ -1,9 +1,10 @@
 .header {
   position: relative;
 
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill);
+  display: flex;
+  //display: grid;
+  //justify-content: center;
+  //grid-template-columns: repeat(auto-fill, 1fr);
   height: 100vh;
 
   @media (max-width: 700px) {
