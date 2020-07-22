@@ -1,0 +1,31 @@
+.nav {
+  z-index: 1;
+
+  width: 100vh;
+  height: 100vh;
+
+  background-color: $highlight-color;
+
+  transition: all 2s ease-in-out;
+  transform: translateY(-110%);
+
+  &__list {
+    margin: #{$logo-height + 50px} 50px;
+  }
+
+  &__item {
+    padding: 15px;
+
+    font-size: $mobile-font;
+  }
+
+  &__link {
+    font-family: "IBMPlexSans-Bold.ttf", "IBMPlexSans-Regular", sans-serif;
+    color: $headers-color;
+  }
+}
+
+.nav-active {
+  transition: all 2s ease-in-out;
+  transform: translateY(0);
+}

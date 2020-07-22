@@ -1,0 +1,43 @@
+html,
+body,
+ul,
+li,
+button,
+input,
+textarea,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  font-family: "IBMPlexSans-Light", sans-serif;
+  font-weight: 300;
+  font-size: $main-font;
+  line-height: 150%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $body-color;
+}
+
+h1,
+h2 {
+  font-family: "PalyfairDisplay", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}

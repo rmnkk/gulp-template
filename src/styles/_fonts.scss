@@ -1,6 +1,35 @@
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "IBMPlexSans-Regular";
+  src: url("../fonts/IBMPlexSans-Regular.ttf") format("truetype");
+
+}
+
+@font-face {
+  font-family: "IBMPlexSans-Light";
+  src: url("../fonts/IBMPlexSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBMPlexSans-Medium.ttf";
+  src: url("../fonts/IBMPlexSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBMPlexSans-SemiBold.ttf";
+  src: url("../fonts/IBMPlexSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBMPlexSans-Bold.ttf";
+  src: url("../fonts/IBMPlexSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold.ttf";
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Regular.ttf";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
 }

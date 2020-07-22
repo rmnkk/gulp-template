@@ -1,0 +1,14 @@
+.content-container {
+  @media (min-width: 769px) {
+    width: $content-container-width;
+    padding: 0 37px;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 0 55px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 37px;
+  }
+}
