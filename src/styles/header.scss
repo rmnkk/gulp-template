@@ -2,9 +2,6 @@
   position: relative;
 
   display: flex;
-  //display: grid;
-  //justify-content: center;
-  //grid-template-columns: repeat(auto-fill, 1fr);
   height: 100vh;
 
   @media (max-width: 700px) {
@@ -15,24 +12,41 @@
   }
 
   &__logo {
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    right: 50%;
+    align-self: center;
+
+    @media (min-width: 701px) {
+      position: absolute;
+      top: 15px;
+      right: 50%;
+    }
+
+    @media (max-width: 700px) {
+      margin-top: 15px;
+    }
+
+    &-active {
+      @media (min-width: 1025px) {
+        right: 0;
+      }
+    }
   }
 
   &__top {
     display: flex;
-    align-items: center;
+    @media (min-width: 1025px) {
+      align-items: center;
+    }
 
     margin-top: 45px;
   }
 
   &__nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   &__image-container {
@@ -148,8 +162,21 @@
     background-color: inherit;
     border: 1px solid $highlight-color;
 
+    transition: all $transition-time linear;
+
     @media (max-width: 700px) {
       width: 100%;
+    }
+
+    &:hover {
+      color: $body-color;
+      background-color: $highlight-color;
+    }
+
+    &:hover + div {
+      color: $highlight-color;
+      background-color: $body-color;
+      border: 1px solid $highlight-color;
     }
   }
 
@@ -165,6 +192,8 @@
     font-weight: 300;
     color: $body-color;
     background-color: $highlight-color;
+
+    transition: all $transition-time linear;
   }
 
   &__bottom {
