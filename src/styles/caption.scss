@@ -1,0 +1,46 @@
+.caption {
+  position: relative;
+  height: $caption__content-height / 2;
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    margin-left: 50%;
+    padding: 45px 100px 50px;
+
+    width: 570px;
+    height: 204px;
+    background-color: #fff;
+    box-shadow: 0 2px 0 rgba(26, 90, 76, 0.25);
+
+    transform: translate(-50%, 0);
+
+    @media (max-width: 768px) {
+      width: 85%;
+    }
+
+    @media (max-width: 640px) {
+      height: 154px;
+      padding: 25px 20px 34px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+  }
+
+  &__heading {
+    @extend %heading;
+  }
+
+  &__text {
+    @extend %caption;
+
+  }
+
+}
