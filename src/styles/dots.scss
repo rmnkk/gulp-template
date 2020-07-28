@@ -6,8 +6,11 @@
   display: inline-flex;
   column-gap: 22px;
 
+  @media (min-width: 1025px) {
+    display: none;
+  }
+
   &__item {
-    display: block;
     height: 9px;
     width: 9px;
 

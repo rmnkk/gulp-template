@@ -186,6 +186,7 @@
     text-transform: uppercase;
 
     transition: all $transition-time linear;
+    cursor: pointer;
 
     @media (max-width: 700px) {
       width: 100%;
@@ -204,19 +205,7 @@
   }
 
   &__arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    width: 70px;
-
-    font-family: inherit;
-    font-size: $main-font;
-    font-weight: 300;
-    color: $body-color;
-    background-color: $highlight-color;
-
-    transition: all $transition-time linear;
+    @extend %arrow;
   }
 
   &__bottom {

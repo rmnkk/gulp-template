@@ -1,0 +1,13 @@
+.gallery {
+  &__arrow {
+    display: none;
+
+    margin-top: 30px;
+    @extend %arrow;
+
+    @media (min-width: 1280px) {
+      display: flex;
+    }
+
+  }
+}

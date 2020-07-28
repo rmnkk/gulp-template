@@ -10,4 +10,8 @@
   background-position: center;
 
   transition: all $transition-time ease-in-out;
+
+  @media (max-width: 640px) {
+    display: inline-block;
+  }
 }
