@@ -1,0 +1,17 @@
+.logo {
+  z-index: 3;
+
+  width: $logo-width;
+  height: $logo-height;
+
+  background-image: url("../images/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: all $transition-time ease-in-out;
+
+  @media (max-width: 640px) {
+    display: inline-block;
+  }
+}

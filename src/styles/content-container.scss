@@ -1,0 +1,26 @@
+.content-container {
+  @media (min-width: 2049px) {
+    min-width: $content-container-width;
+    padding: 0 10vh;
+  }
+
+  @media (max-width: 2048px) {
+    padding: 0 175px;
+  }
+
+  @media (max-width: 1600px) {
+    padding: 0 100px;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 0 55px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 34px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 0 20px;
+  }
+}

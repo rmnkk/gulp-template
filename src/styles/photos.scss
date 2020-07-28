@@ -1,0 +1,98 @@
+$numbers: (1, first),(2, second),(3, third),(4, fourth),(5, fifth),(6, sixth);
+
+.photos {
+  position: relative;
+
+  display: grid;
+  grid-gap: 30px;
+  grid-auto-rows: min-content;
+  grid-auto-columns: min-content;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-areas: "first second second third"
+    "fourth fourth fifth sixth";
+
+  &__item {
+    width: 100%;
+  }
+
+  @media (max-width: 1600px) {
+    grid-template-areas: "first second second"
+      "fourth fourth fifth";
+  }
+
+  @each $nmb, $order in $numbers {
+    div:nth-child(#{$nmb}) {
+      grid-area: $order;
+    }
+  }
+
+  @media (max-width: 1600px) {
+    div:nth-child(3n) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    @for $i from 2 through 6 {
+      div:nth-child(#{$i}) {
+        display: none;
+      }
+    }
+
+    div:nth-child(3) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: stretch;
+    grid-gap: 20px;
+
+    div {
+      flex-grow: 1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    @for $i from 2 through 6 {
+      div:nth-child(#{$i}) {
+        display: none;
+      }
+    }
+  }
+
+  &__next,
+  &__prev {
+    position: absolute;
+    top: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 48px;
+    width: 48px;
+
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+
+    cursor: pointer;
+    transform: translate(0, -50%);
+
+    @media (min-width: 1025px) {
+      display: none;
+    }
+  }
+
+  &__next {
+    right: 20px;
+  }
+
+  &__prev {
+    left: 20px;
+  }
+
+}

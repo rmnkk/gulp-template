@@ -1,0 +1,26 @@
+.dots {
+  position: relative;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+
+  display: inline-flex;
+  column-gap: 22px;
+
+  @media (min-width: 1025px) {
+    display: none;
+  }
+
+  &__item {
+    height: 9px;
+    width: 9px;
+
+    background-color: $dots-color;
+    border-radius: 50%;
+
+    transition: all $transition-time linear;
+
+    &:hover {
+      background-color: $highlight-color;
+    }
+  }
+}
